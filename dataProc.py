@@ -13,20 +13,18 @@ def isInt(s):
     except ValueError:
         return False
 
+def openDataFile(filename):
+    FullPath = './data/NOAA_StormData/uncompressed/' + filename
+    return pd.read_csv(FullPath, low_memory=False)
+
 def printRow(row):
-    lat1 = row[1]['LATITUDE']
-    long1 = row[1]['LONGITUDE']
-    eventID = row[1]['EVENT_ID']
-    episodeID = row[1]['EPISODE_ID']
-    stormType = row[1]['EVENT_TYPE']
-    if str(lat1) != "nan" and isInt(str(episodeID)):
-        print "*"*10, "ENTRY", "*"*10
-        print "Episode ID: ", episodeID
-        print "Latitude: " + str(lat1).ljust(10) + " Longitude: " + str(long1).ljust(10)
-        print "Storm Type: ", stormType
-    
+    data = row[1]['END_DATE_TIME']
+    print data
+
 pd.set_option('display.max_rows', 10)
 pd.set_option('display.width', 1000)
-data = pd.read_csv('correctedData.csv')
+
+data = openDataFile('concatedDataAll')
+data = data.sort('YEAR', ascending=True)
 for row in data.iterrows():
     printRow(row)
