@@ -30,7 +30,8 @@ sortingDict = {'January': 1, 'February': 2, 'March': 3, 'April': 4,
                'September': 9, 'October': 10, 'November': 11, 'December': 12}
 
 convertedData = pd.DataFrame(columns=['eventID', 'episodeID', 'begin_lat', 'begin_long',
-                                      'end_lat', 'end_long'])
+                                      'end_lat', 'end_long', 'begin_day', 'begin_month',
+                                      'end_day', 'year', 'stormType'])
 data = openDataFile('concatedDataAll')
 #data['MONTH_RANK'] = data['MONTH_NAME'].map(sortingDict)
 data = data.sort(columns=['YEAR', 'MONTH_RANK'], ascending=True)
