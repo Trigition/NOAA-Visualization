@@ -22,9 +22,6 @@ def printRow(row):
     Year = row[1]['YEAR']
     print "Year: ", Year, "Month: ", Month
 
-def timesort(entry1, entry2):
-    longDate1, shortDate1 = ()
-
 pd.set_option('display.max_rows', 10)
 pd.set_option('display.width', 1000)
 
@@ -32,9 +29,12 @@ sortingDict = {'January': 1, 'February': 2, 'March': 3, 'April': 4,
                'May': 5, 'June': 6, 'July': 7, 'August': 8,
                'September': 9, 'October': 10, 'November': 11, 'December': 12}
 
+convertedData = pd.DataFrame(columns=['eventID', 'episodeID', 'begin_lat', 'begin_long',
+                                      'end_lat', 'end_long'])
 data = openDataFile('concatedDataAll')
 #data['MONTH_RANK'] = data['MONTH_NAME'].map(sortingDict)
 data = data.sort(columns=['YEAR', 'MONTH_RANK'], ascending=True)
 
 for row in data.iterrows():
+
     printRow(row)
