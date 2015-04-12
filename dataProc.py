@@ -30,12 +30,24 @@ sortingDict = {'January': 1, 'February': 2, 'March': 3, 'April': 4,
                'September': 9, 'October': 10, 'November': 11, 'December': 12}
 
 convertedData = pd.DataFrame(columns=['eventID', 'episodeID', 'begin_lat', 'begin_long',
-                                      'end_lat', 'end_long', 'begin_day', 'begin_month',
-                                      'end_day', 'year', 'stormType'])
+                                      'end_lat', 'end_long', 'begin_day', 'month',
+                                      'end_day', 'year', 'stormType', 'propertyDamage'])
 data = openDataFile('concatedDataAll')
 #data['MONTH_RANK'] = data['MONTH_NAME'].map(sortingDict)
-data = data.sort(columns=['YEAR', 'MONTH_RANK'], ascending=True)
-
+#data = data.sort(columns=['YEAR'], ascending=True)
+print data.columns.values.tolist()
 for row in data.iterrows():
-
-    printRow(row)
+    #Determine Time Parameters
+    beginDay = row[1]['BEGIN_DAY']
+    endDay = row[1]['END_DAY']
+    month = row[1]['MONTH_NAME']
+    year = row[1]['YEAR']
+    eventID = row[1]['EVENT_ID']
+    episodeID = row[1]['EPISODE_ID']
+    beginLat = row[1]['BEGIN_LAT']
+    beginLong = row[1]['BEGIN_LON']
+    endLat = row[1]['END_LAT']
+    endLong = row[1]['END_LON']
+    stormType = row[1]['EVENT_TYPE']
+    damage = row[1]['DAMAGE_PROPERTY']
+    print "On:", month, ",", year, "a", stormType, "occured."
