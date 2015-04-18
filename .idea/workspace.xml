@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0631ea-e63b-40a3-9496-52777bbcb0be" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataProc.py" afterPath="$PROJECT_DIR$/dataProc.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjectPage/index.html" afterPath="$PROJECT_DIR$/ProjectPage/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NOAA-Visualization.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +31,8 @@
       <file leaf-file-name="dataProc.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dataProc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9076087" vertical-offset="304" max-vertical-offset="1258">
-              <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.5380435" vertical-offset="355" max-vertical-offset="1275">
+              <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -173,8 +175,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dataProc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9076087" vertical-offset="304" max-vertical-offset="1258">
-          <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.5380435" vertical-offset="355" max-vertical-offset="1275">
+          <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
           <folding />
         </state>
       </provider>

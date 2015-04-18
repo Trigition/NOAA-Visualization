@@ -5,3 +5,6 @@ d3-master
 d3
 data
 legacyData
+.idea
+out.txt
+dataProc.pyc
