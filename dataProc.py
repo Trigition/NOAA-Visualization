@@ -60,3 +60,7 @@ pd.set_option('display.max_rows', 10)
 pd.set_option('display.width', 1000)
 input_file = 'concatedDataAll'
 
+beginLat = series_fromFile(input_file, Begin_Latitude)
+beginLong = series_fromFile(input_file, Begin_Longitude)
+csvFromSeries('BeginLatCSV', beginLat)
+csvFromSeries('BeginLongCSV', beginLong)
