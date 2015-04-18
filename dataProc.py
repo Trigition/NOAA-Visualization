@@ -59,8 +59,21 @@ def print_csv_columns(df):
 pd.set_option('display.max_rows', 10)
 pd.set_option('display.width', 1000)
 input_file = 'concatedDataAll'
+<<<<<<< HEAD
 
 beginLat = series_fromFile(input_file, Begin_Latitude)
 beginLong = series_fromFile(input_file, Begin_Longitude)
 csvFromSeries('BeginLatCSV', beginLat)
 csvFromSeries('BeginLongCSV', beginLong)
+=======
+raw_data = df_fromFile(input_file)
+#print_csv_columns(raw_data)
+usable_data = raw_data[['BEGIN_LAT', 'BEGIN_LON',
+                        'END_LAT', 'END_LON',
+                        'BEGIN_YEARMONTH', 'BEGIN_DAY', 'BEGIN_TIME',
+                        'END_YEARMONTH', 'END_DAY', 'END_TIME']]
+usable_data.sort(['BEGIN_YEARMONTH', 'BEGIN_DAY', 'BEGIN_TIME'], ascending=True, inplace=True)
+usable_data.reset_index
+print usable_data
+usable_data.to_csv('./data/NOAA_StormData/uncompressed/' + 'blah.csv')
+>>>>>>> ccce235324059150ba8ea8394cf7fde5fd78c57d
